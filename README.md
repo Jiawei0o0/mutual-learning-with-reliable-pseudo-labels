@@ -1,5 +1,5 @@
 # mutual-learning-with-reliable-pseudo-labels
-
+[Mutual learning with reliable pseudo label for semi-supervised medical image segmentation](https://www.sciencedirect.com/science/article/pii/S1361841524000367)
 ## Train and evaluate the model on LA dataset.
 ```python
 sh train_la.sh
