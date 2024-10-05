@@ -194,7 +194,7 @@ if __name__ == "__main__":
                         weight_pixel_t = (1 - nn.MSELoss(reduction='none')(mask_t, y_all[j])).mean(1)
                         weight_pixel_t = weight_pixel_t * mask
 
-                        loss_t = consistency_criterion(y_all[i], torch.argmax(y_all[j], dim=1).detach())
+                        loss_t = consistency_criterion(outputs[i], torch.argmax(y_all[j], dim=1).detach())
                         loss_consist += (loss_t * weight_pixel_t.detach()).sum() / (mask.sum() + 1e-6)
 
             iter_num = iter_num + 1
